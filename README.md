@@ -8,3 +8,9 @@ https://medium.com/@zulfikarirham02/telco-customer-churn-prediction-using-machin
 
 https://www.sciencedirect.com/science/article/pii/S2666720723001443
 
+docker build -t customer-churn-airflow:2.10.0 .
+
+docker-compose up airflow-init
+docker-compose up
+
+

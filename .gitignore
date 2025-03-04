@@ -1,3 +1,4 @@
 postgres_data/
 mysql/data/
 airflow/logs
+mlflow/data/
