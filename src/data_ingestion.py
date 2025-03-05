@@ -1,5 +1,8 @@
 import pandas as pd
 
-def ingest_data(url, file_path):
-    data = pd.read_csv(url)
-    data.to_csv(file_path, index=False)
+def download_data():
+    url = "https://raw.githubusercontent.com/datasciencedojo/datasets/master/telco-churn-data/telco_churn.csv"
+    df = pd.read_csv(url)
+    df.to_csv('/opt/airflow/src/raw_data.csv', index=False)
+    print("Data downloaded successfully!")
+
