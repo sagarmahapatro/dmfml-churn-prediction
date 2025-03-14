@@ -7,7 +7,7 @@ from datetime import datetime
 SRC_PATH = '/opt/airflow/src/'
 
 # Import functions from the source scripts
-from src.data_ingestion import download_data
+from src.data_ingestion import load_data_to_stagging
 from src.data_validation import validate_data
 from src.data_preparation import prepare_data
 from src.data_transformation import transform_data
@@ -26,7 +26,7 @@ dag = DAG(
 # Airflow tasks for each pipeline stage
 ingest_data = PythonOperator(
     task_id='download_data',
-    python_callable=download_data,
+    python_callable=load_data_to_stagging,
     dag=dag
 )
 
